@@ -1,0 +1,39 @@
+nombre = "Michaell Pulido"
+direccion = "Mosquera, Cundinamarca"
+telefono = "3227336328"
+email = "kateriterinaguilar12345@gmail.com"
+
+
+productos = ["Laptop", "Mouse inalámbrico", "Teclado mecánico"]
+cantidades = [1, 2, 1]
+precios = [1200.00, 25.00, 80.00]
+
+
+subtotal = 0
+for i in range(len(productos)):
+    subtotal += cantidades[i] * precios[i]
+
+
+iva = subtotal * 0.16
+total = subtotal + iva
+
+
+print("======================================")
+print("              FACTURA")
+print("======================================")
+print("Cliente:", nombre)
+print("Dirección:", direccion)
+print("Teléfono:", telefono)
+print("Email:", email)
+print("======================================")
+print("Descripción           Cant.   Precio")
+print("--------------------------------------")
+
+for i in range(len(productos)):
+    print(f"{productos[i]:<20} {cantidades[i]:<7} {precios[i]:<7.2f}")
+
+print("--------------------------------------")
+print("Subtotal: ", subtotal)
+print("IVA (16%):", iva)
+print("TOTAL:    ", total)
+print("======================================")
